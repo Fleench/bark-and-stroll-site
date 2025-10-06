@@ -22,14 +22,16 @@ body {
 
 /* Main Content */
 main {
-    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
     max-width: 960px;
     margin: 0 auto;
 }
 
 section {
     background: #fff;
-    margin-bottom: 1rem;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -82,12 +84,7 @@ h2 {
 /* Footer */
 footer {
     text-align: center;
-    padding: 0.5rem;
-    background: none;
-    color: #333;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 1.5rem;
 }
 
 /* Responsive Design */
