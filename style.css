@@ -8,17 +8,16 @@ body {
     color: #333;
 }
 
-/* Header */
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+/* Title Card */
+#title-card {
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
+#title-card h1 {
     font-size: 2.5rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    border-bottom: none;
 }
 
 /* Main Content */
@@ -97,7 +96,7 @@ footer {
         flex-direction: column;
     }
 
-    header h1 {
+    #title-card h1 {
         font-size: 2rem;
     }
 }
