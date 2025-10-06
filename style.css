@@ -24,10 +24,10 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1.5rem;
     padding: 1.5rem;
-    max-width: 960px;
-    margin: 0 auto;
+    margin: 3rem;
 }
 
 section {
@@ -35,6 +35,8 @@ section {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 960px;
 }
 
 h2 {
