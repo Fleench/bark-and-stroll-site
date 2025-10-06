@@ -48,15 +48,20 @@
         <section id="schedule">
             <h2>Schedule a Walk</h2>
             <p>Use the calendar below to book a time that works for you.</p>
-            <div class="cal-embed">
-                <!-- Cal.com embed will go here -->
-                <p>Cal.com embed placeholder</p>
-            </div>
+            <div class="cal-embed"></div>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Dog Walking for SEEK2026</p>
     </footer>
+    <script type="text/javascript">(function (C, A, L) { let S = A.createElement(L), E = A.getElementsByTagName(L)[0]; S.type = "text/javascript"; S.async = true; S.src = "https://app.cal.com/embed/embed.js"; E.parentNode.insertBefore(S, E); })(window, document, "script");</script>
+    <script>
+      Cal("inline", {
+        elementOrSelector: ".cal-embed",
+        calLink: "flench04/dogwalk1"
+      });
+      Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
 </body>
 </html>
