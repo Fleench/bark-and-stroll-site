@@ -119,6 +119,10 @@ footer {
     padding: 1.5rem 1.5rem 3rem;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .about-container {
