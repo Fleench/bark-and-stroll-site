@@ -3,24 +3,24 @@
    ============================================ */
 :root {
     /* Primary Brand Colors */
-    --brand-primary: #005a9c;        /* deep-blue — trust anchor */
-    --brand-accent: #ffc107;         /* sunbeam-yellow — friendly pop */
+    --brand-primary: #a0522d;        /* sienna (darker brown) */
+    --brand-accent: #f4a460;         /* sandy-brown (lighter brown) */
 
     /* Promotional / Highlight */
-    --promo-bg: #fff3cd;             /* soft-yellow — promo background */
+    --promo-bg: #fff8dc;             /* cornsilk (light yellow) */
 
     /* Background Layers */
-    --page-bg: #f0f4f8;              /* cool-gray — base backdrop */
+    --page-bg: #faf0e6;              /* linen (light tan) */
     --card-bg: #ffffff;              /* pure-white — content surface */
-    --panel-bg: #fafafa;             /* mist-gray — calendar background */
+    --panel-bg: #fdf5e6;             /* old-lace (off-white) */
 
     /* Text Hierarchy */
-    --text-primary: #333333;         /* dark-graphite */
-    --text-secondary: #555555;       /* ash-gray */
+    --text-primary: #6b4f34;         /* dark-brown */
+    --text-secondary: #8b7355;       /* medium-brown */
 
     /* Utility & Dividers */
-    --border-light: #dddddd;         /* cloud-gray */
-    --divider-line: #eeeeee;         /* pale-gray */
+    --border-light: #d2b48c;         /* tan */
+    --divider-line: #eee8aa;         /* pale-goldenrod */
 }
 
 /* ============================================
