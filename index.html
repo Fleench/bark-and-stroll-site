@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta tags for character set, viewport, and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paws</title>
+
+    <!-- Favicon and stylesheet links -->
     <link rel="icon" href="assets/main-logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Main content container -->
     <main>
+
+        <!-- Section: Title Card -->
+        <!-- This section serves as the main header for the page, displaying the brand name and fundraising purpose. -->
         <section id="title-card">
             <h1>Paws</h1>
             <p>Fundraising for SEEK2026</p>
         </section>
 
+        <!-- Section: About Me -->
+        <!-- This section introduces the service provider and their dog, with placeholder images. -->
         <section id="about">
             <h2>About Me</h2>
             <div class="about-container">
@@ -28,6 +38,8 @@
             </div>
         </section>
 
+        <!-- Section: Promotions -->
+        <!-- This section highlights any special offers or promotions. -->
         <section id="promotions">
             <h2>Promotions</h2>
             <div class="promotion-details">
@@ -36,9 +48,12 @@
             </div>
         </section>
 
+        <!-- Section: Services & Rates -->
+        <!-- This section lists the available services and their prices in distinct categories. Some services are hidden by default. -->
         <section id="services">
             <h2>Services & Rates</h2>
 
+            <!-- Category: Walking & Drop-Ins -->
             <div class="service-category">
                 <h3>Walking & Drop-Ins</h3>
                 <div class="service-item">
@@ -49,12 +64,14 @@
                     <span class="service-name">60-Minute Walk & Play Session</span>
                     <span class="service-price">$30 per walk</span>
                 </div>
+                <!-- Hidden by default, can be enabled via CSS -->
                 <div class="service-item hidden">
                     <span class="service-name">20-Minute Drop-In Visit</span>
                     <span class="service-price">$15 per visit</span>
                 </div>
             </div>
 
+            <!-- Category: Specialty Services (Hidden by default) -->
             <div class="service-category hidden">
                 <h3>Specialty Services</h3>
                 <div class="service-item">
@@ -72,21 +89,27 @@
             </div>
         </section>
 
+        <!-- Section: Schedule a Walk -->
+        <!-- This section contains an embedded calendar from cal.com for booking appointments. -->
         <section id="schedule">
             <h2>Schedule a Walk</h2>
             <p>Use the calendar below to book a time that works for you.</p>
             <iframe
-  id="inlineFrameExample"
-  title="Inline Frame Example"
-  width="100%"
-  height="700"
-  src="https://cal.com/flench04">
-</iframe>
+              id="inlineFrameExample"
+              title="Inline Frame Example"
+              width="100%"
+              height="700"
+              src="https://cal.com/flench04">
+            </iframe>
         </section>
+
     </main>
 
+    <!-- Footer -->
+    <!-- The footer contains the copyright notice. -->
     <footer>
         <p>&copy; 2025 Paws</p>
     </footer>
+
 </body>
 </html>
