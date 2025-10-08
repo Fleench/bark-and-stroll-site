@@ -45,9 +45,39 @@ h2 {
     padding-bottom: 0.5rem;
 }
 
-/* Services Section */
-.service-details {
+/* Promotions Section */
+.promotion-details {
     margin-bottom: 1rem;
+}
+
+/* Services Section */
+.service-category {
+    margin-bottom: 1.5rem;
+}
+
+.service-category h3 {
+    color: #555;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid #eee;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.service-name {
+    flex: 3;
+    padding-right: 1rem;
+}
+
+.service-price {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    color: #0056b3;
 }
 
 /* About Section */
