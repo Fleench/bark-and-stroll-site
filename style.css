@@ -1,187 +1,265 @@
 /* ============================================
    🐾 Brand Color Variables
    ============================================ */
+/**
+ * @section Brand Color Variables
+ * @description Defines the color palette for the website using CSS custom properties.
+ * These variables are used throughout the stylesheet to ensure brand consistency.
+ */
 :root {
     /* Primary Brand Colors */
-    --brand-primary: #a0522d;        /* sienna (darker brown) */
-    --brand-accent: #f4a460;         /* sandy-brown (lighter brown) */
+    --brand-primary: #a0522d;        /* sienna (darker brown): Used for major headings and accents. */
+    --brand-accent: #f4a460;         /* sandy-brown (lighter brown): Used for borders and highlights. */
 
     /* Promotional / Highlight */
-    --promo-bg: #fff8dc;             /* cornsilk (light yellow) */
+    --promo-bg: #fff8dc;             /* cornsilk (light yellow): Background for promotional sections. */
 
     /* Background Layers */
-    --page-bg: #faf0e6;              /* linen (light tan) */
-    --card-bg: #ffffff;              /* pure-white — content surface */
-    --panel-bg: #fdf5e6;             /* old-lace (off-white) */
+    --page-bg: #faf0e6;              /* linen (light tan): Overall background color for the page. */
+    --card-bg: #ffffff;              /* pure-white — content surface: Background for content cards. */
+    --panel-bg: #fdf5e6;             /* old-lace (off-white): Background for smaller panels or embeds. */
 
     /* Text Hierarchy */
-    --text-primary: #6b4f34;         /* dark-brown */
-    --text-secondary: #8b7355;       /* medium-brown */
+    --text-primary: #6b4f34;         /* dark-brown: Primary text color. */
+    --text-secondary: #8b7355;       /* medium-brown: Secondary text color, used for footer or less important text. */
 
     /* Utility & Dividers */
-    --border-light: #d2b48c;         /* tan */
-    --divider-line: #eee8aa;         /* pale-goldenrod */
+    --border-light: #d2b48c;         /* tan: For light borders. */
+    --divider-line: #eee8aa;         /* pale-goldenrod: For subtle divider lines. */
 }
 
 /* ============================================
    🐾 General Body Styles
    ============================================ */
+/**
+ * @section General Body Styles
+ * @description Sets the base styles for the entire document.
+ */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background: var(--page-bg);
-    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Modern, system-based font stack for wide compatibility. */
+    line-height: 1.6; /* Improves readability. */
+    margin: 0; /* Removes default browser margin. */
+    padding: 0; /* Removes default browser padding. */
+    background: var(--page-bg); /* Sets the page background color from variables. */
+    color: var(--text-primary); /* Sets the default text color from variables. */
 }
 
 /* ============================================
    🐾 Title Card
    ============================================ */
+/**
+ * @section Title Card
+ * @description Styles the main header/title card of the page.
+ */
 #title-card {
-    text-align: center;
-    background: var(--brand-primary);
-    color: var(--card-bg);
-    padding: 2rem;
-    border-radius: 8px;
+    text-align: center; /* Centers the text content. */
+    background: var(--brand-primary); /* Uses the primary brand color for the background. */
+    color: var(--card-bg); /* Sets text color to contrast with the background. */
+    padding: 2rem; /* Adds ample spacing inside the card. */
+    border-radius: 8px; /* Rounds the corners of the card. */
 }
 
+/**
+ * @description Styles the main heading within the title card.
+ */
 #title-card h1 {
-    font-size: 2.5rem;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    border-bottom: none;
+    font-size: 2.5rem; /* Large font size for the main title. */
+    margin-top: 0; /* Removes default top margin. */
+    margin-bottom: 0.5rem; /* Adds a small space below the title. */
+    border-bottom: none; /* Removes any default border. */
 }
 
 /* ============================================
    🐾 Main Content
    ============================================ */
+/**
+ * @section Main Content
+ * @description Styles the main container that holds all content sections.
+ */
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    margin: 3rem 3rem 0;
+    display: flex; /* Enables flexbox layout. */
+    flex-direction: column; /* Stacks children vertically. */
+    align-items: center; /* Centers children horizontally. */
+    gap: 1.5rem; /* Adds space between each section. */
+    padding: 1.5rem; /* Adds padding around the main content area. */
+    margin: 3rem 3rem 0; /* Adds margin to the top and sides. */
 }
 
+/**
+ * @description Styles for generic content sections.
+ */
 section {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 100%;
-    max-width: 960px;
+    background: var(--card-bg); /* Sets a white background for content cards. */
+    padding: 1.5rem; /* Adds internal spacing. */
+    border-radius: 8px; /* Rounds the corners. */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth. */
+    width: 100%; /* Ensures the section takes the full width of its container. */
+    max-width: 960px; /* Constrains the maximum width for readability on large screens. */
 }
 
+/**
+ * @description Styles for all H2 headings.
+ */
 h2 {
-    color: var(--brand-primary);
-    border-bottom: 2px solid var(--brand-accent);
-    padding-bottom: 0.5rem;
+    color: var(--brand-primary); /* Sets the color to the primary brand color. */
+    border-bottom: 2px solid var(--brand-accent); /* Adds a colored underline for emphasis. */
+    padding-bottom: 0.5rem; /* Adds space between the text and the underline. */
 }
 
 /* ============================================
    🐾 Promotions Section
    ============================================ */
+/**
+ * @section Promotions Section
+ * @description Styles for the promotional offer container.
+ */
 .promotion-details {
-    background: var(--promo-bg);
-    border-left: 5px solid var(--brand-accent);
-    padding: 1rem;
-    margin-bottom: 1rem;
+    background: var(--promo-bg); /* Uses the promotional background color. */
+    border-left: 5px solid var(--brand-accent); /* Adds a highlight border on the left. */
+    padding: 1rem; /* Adds internal spacing. */
+    margin-bottom: 1rem; /* Adds space below the promotion. */
 }
 
 /* ============================================
    🐾 Services Section
    ============================================ */
+/**
+ * @section Services Section
+ * @description Styles for the services and rates area.
+ */
 .service-category {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem; /* Adds space between different service categories. */
 }
 
+/**
+ * @description Styles for the headings within each service category.
+ */
 .service-category h3 {
-    color: var(--text-primary);
-    margin-bottom: 0.75rem;
-    padding-bottom: 0.25rem;
-    border-bottom: 1px solid var(--divider-line);
+    color: var(--text-primary); /* Sets the text color. */
+    margin-bottom: 0.75rem; /* Adds space below the heading. */
+    padding-bottom: 0.25rem; /* Adds space between text and border. */
+    border-bottom: 1px solid var(--divider-line); /* Adds a subtle divider line. */
 }
 
+/**
+ * @description A flex container for a single service item, aligning name and price.
+ */
 .service-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
+    display: flex; /* Enables flexbox layout. */
+    justify-content: space-between; /* Pushes the service name and price to opposite ends. */
+    padding: 0.5rem 0; /* Adds vertical padding. */
 }
 
+/**
+ * @description Styles the name of the service.
+ */
 .service-name {
-    flex: 3;
-    padding-right: 1rem;
+    flex: 3; /* Allows the name to take up more space. */
+    padding-right: 1rem; /* Adds space between the name and the price. */
 }
 
+/**
+ * @description Styles the price of the service.
+ */
 .service-price {
-    flex: 1;
-    text-align: right;
-    font-weight: bold;
-    color: var(--brand-primary);
+    flex: 1; /* Assigns a smaller portion of the space. */
+    text-align: right; /* Aligns the price to the right. */
+    font-weight: bold; /* Makes the price stand out. */
+    color: var(--brand-primary); /* Uses the primary brand color for the price. */
 }
 
 /* ============================================
    🐾 About Section
    ============================================ */
+/**
+ * @section About Section
+ * @description Styles for the "About Me" and "About Dog" sections.
+ */
 .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+    display: flex; /* Enables flexbox layout. */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens. */
+    gap: 2rem; /* Adds space between the about cards. */
+    justify-content: center; /* Centers the items horizontally. */
+    align-items: center; /* Aligns items vertically. */
 }
 
+/**
+ * @description Styles for the individual containers for person and dog info.
+ */
 .about-me, .about-dog {
-    text-align: center;
-    max-width: 300px;
+    text-align: center; /* Centers the text and image. */
+    max-width: 300px; /* Constrains the width of each card. */
 }
 
+/**
+ * @description Styles for the images in the about section.
+ */
 .about-container img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border: 4px solid var(--brand-accent);
+    border-radius: 50%; /* Creates circular images. */
+    width: 150px; /* Sets a fixed width. */
+    height: 150px; /* Sets a fixed height. */
+    object-fit: cover; /* Ensures the image covers the area without distortion. */
+    border: 4px solid var(--brand-accent); /* Adds a colored border. */
 }
 
 /* ============================================
    🐾 Schedule Section
    ============================================ */
+/**
+ * @section Schedule Section
+ * @description Styles for the embedded calendar section.
+ */
 .cal-embed {
-    min-height: 400px;
-    border: 1px solid var(--border-light);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--panel-bg);
+    min-height: 400px; /* Ensures the container has a minimum height. */
+    border: 1px solid var(--border-light); /* Adds a light border. */
+    display: flex; /* Enables flexbox layout. */
+    justify-content: center; /* Centers content horizontally. */
+    align-items: center; /* Centers content vertically. */
+    background-color: var(--panel-bg); /* Sets a background color. */
 }
 
 /* ============================================
    🐾 Footer
    ============================================ */
+/**
+ * @section Footer
+ * @description Styles for the page footer.
+ */
 footer {
-    text-align: center;
-    padding: 1.5rem 1.5rem 3rem;
-    color: var(--text-secondary);
+    text-align: center; /* Centers the copyright text. */
+    padding: 1.5rem 1.5rem 3rem; /* Adds padding, with extra at the bottom. */
+    color: var(--text-secondary); /* Uses a secondary text color. */
 }
 
 /* ============================================
    🐾 Utility Classes
    ============================================ */
+/**
+ * @section Utility Classes
+ * @description Reusable helper classes.
+ */
 .hidden {
-    display: none;
+    display: none; /* Hides an element from the page completely. */
 }
 
 /* ============================================
    🐾 Responsive Design
    ============================================ */
+/**
+ * @section Responsive Design
+ * @description Media queries to adjust the layout for smaller screens (e.g., mobile devices).
+ */
 @media (max-width: 768px) {
+    /**
+     * @description Stacks the about cards vertically on smaller screens.
+     */
     .about-container {
         flex-direction: column;
     }
 
+    /**
+     * @description Reduces the font size of the main title on smaller screens.
+     */
     #title-card h1 {
         font-size: 2rem;
     }
