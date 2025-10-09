@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paws</title>
+    <meta name="description" content="Paws — local dog walking and pet care. First weekday 30-minute walk 50% off for new clients. Book online.">
+    <meta property="og:title" content="Paws — Dog Walking">
+    <meta property="og:description" content="Reliable, friendly dog walking and pet care. New client promo available.">
+    <meta property="og:image" content="/assets/logo.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://paws.flench.me/">
 
     <!-- Favicon and stylesheet links -->
     <link rel="icon" href="assets/main-logo.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="https://app.cal.com/embed/embed.js" async></script>
 </head>
 <body>
 
@@ -21,7 +27,7 @@
             <span class="header-subtitle">Fundraising for SEEK2026</span>
         </div>
         <div class="header-buttons">
-            <a href="https://cal.com/flench04" class="button booking-button" target="_blank">Book Now</a>
+            <a href="https://cal.com/flench04" class="button booking-button" target="_blank" rel="noopener noreferrer">Book Now</a>
         </div>
     </header>
 
@@ -37,7 +43,7 @@
                         <p>Fundraising for SEEK2026</p>
                     </div>
                     <div class="header-buttons">
-                        <a href="https://cal.com/flench04" class="button booking-button" target="_blank">Book Now</a>
+                        <a href="https://cal.com/flench04" class="button booking-button" target="_blank" rel="noopener noreferrer">Book Now</a>
                     </div>
                 </section>
 
@@ -117,10 +123,11 @@
     <!-- Footer -->
     <!-- The footer contains the copyright notice. -->
     <footer>
-        <p>&copy; 2025 Paws</p>
+        <p>&copy; <span id="year"></span> Paws</p>
     </footer>
 
     <script src="script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 
 </body>
 </html>

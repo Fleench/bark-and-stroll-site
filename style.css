@@ -362,6 +362,11 @@ body.scrolled #sticky-header {
     box-shadow: 0 6px 12px rgba(0,0,0,0.12);
 }
 
+a:focus {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 3px;
+}
+
 /**
  * @description Adds margin to the booking button in the main title card.
  */
