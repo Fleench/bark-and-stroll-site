@@ -57,7 +57,7 @@ body {
     align-items: center; /* Vertically aligns content. */
     background: var(--brand-primary); /* Uses the primary brand color for the background. */
     color: var(--card-bg); /* Sets text color to contrast with the background. */
-    padding: 2rem; /* Adds ample spacing inside the card. */
+    padding: 1.5rem; /* Standardizes card padding. */
     border-radius: 8px; /* Rounds the corners of the card. */
 }
 
@@ -397,6 +397,21 @@ body.scrolled #sticky-header {
  */
 @media (max-width: 768px) {
     /**
+     * @description Reduces side margins for the main content on mobile.
+     */
+    main {
+        margin: 1.5rem 1.5rem 0; /* Reduces side margins. */
+    }
+
+    /**
+     * @description Adjusts sticky header positioning to align with new mobile margins.
+     */
+    #sticky-header {
+        left: 1.5rem; /* Matches main content's mobile margin. */
+        right: 1.5rem; /* Matches main content's mobile margin. */
+    }
+
+    /**
      * @description Stacks the about cards vertically on smaller screens.
      */
     .about-container {
@@ -408,5 +423,14 @@ body.scrolled #sticky-header {
      */
     #title-card h1 {
         font-size: 2rem;
+    }
+
+    /**
+     * @description Stacks title card content vertically on mobile for better flow.
+     */
+    #title-card {
+        flex-direction: column;
+        align-items: flex-start; /* Aligns items to the start (left). */
+        gap: 1rem; /* Adds space between text and button. */
     }
 }
