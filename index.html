@@ -12,18 +12,31 @@
 </head>
 <body>
 
+    <!-- Sticky Header -->
+    <header id="sticky-header">
+        <div class="header-content">
+            <span class="header-title">Paws</span>
+            <span class="header-divider">|</span>
+            <span class="header-subtitle">Fundraising for SEEK2026</span>
+        </div>
+        <div class="header-buttons">
+            <a href="https://cal.com/flench04" class="button booking-button" target="_blank">Book Now</a>
+        </div>
+    </header>
+
     <!-- Main content container -->
     <main>
 
         <!-- Section: Title Card -->
         <!-- This section serves as the main header for the page, displaying the brand name and fundraising purpose. -->
         <section id="title-card">
-            <h1>Paws</h1>
-            <p>Fundraising for SEEK2026</p>
-                    <div class="header-buttons">
-
-                        <a href="https://cal.com/flench04" class="button booking-button" target="_blank">Book Now</a>
-                    </div>
+            <div class="title-card-text">
+                <h1>Paws</h1>
+                <p>Fundraising for SEEK2026</p>
+            </div>
+            <div class="header-buttons">
+                <a href="https://cal.com/flench04" class="button booking-button" target="_blank">Book Now</a>
+            </div>
 
         </section>
 
@@ -101,6 +114,14 @@
         <section id="schedule">
             <h2>Schedule a Walk</h2>
             <p>Use the calendar below to book a time that works for you.</p>
+            <div class="iframe-nav">
+                <button id="cal-back" title="Go back">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                </button>
+                <button id="cal-forward" title="Go forward">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                </button>
+            </div>
             <iframe
               id="inlineFrameExample"
               title="Inline Frame Example"
@@ -117,6 +138,8 @@
     <footer>
         <p>&copy; 2025 Paws</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
