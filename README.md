@@ -1,4 +1,4 @@
-# Paws - Dog Walking Service Website
+# Paws - Dog Walking Services Website
 
 ## 🐾 Project Purpose
 
