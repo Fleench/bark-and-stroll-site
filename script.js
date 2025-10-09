@@ -1,6 +1,6 @@
 /**
  * @file script.js
- * @description Handles dynamic behaviors for the Paws website, including the sticky header and iframe navigation.
+ * @description Handles dynamic behaviors for the Paws website, including the sticky header and cal.com embed.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,35 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /**
-     * @section Iframe Navigation
-     * @description Adds back and forward functionality to the cal.com embed.
+     * @section Cal.com Embed
+     * @description Initializes the Cal.com inline embed. The Cal() function is loaded
+     * from an external script and will queue any calls made before it has loaded.
      */
-    const iframe = document.getElementById('inlineFrameExample');
-    const backButton = document.getElementById('cal-back');
-    const forwardButton = document.getElementById('cal-forward');
-
-    // Note: Cross-origin security restrictions in browsers prevent scripts from directly accessing
-    // the history of an iframe from a different domain (like cal.com).
-    // These buttons will use the iframe's own history navigation methods, but we cannot check
-    // the state (e.g., if history.forward() is possible). This is a best-effort implementation.
-
-    if (backButton) {
-        backButton.addEventListener('click', () => {
-            try {
-                iframe.contentWindow.history.back();
-            } catch (e) {
-                console.error("Could not navigate iframe back due to security restrictions:", e);
-            }
+    try {
+        Cal("inline", {
+            elementOrSelector: "#my-cal-inline",
+            calLink: "flench04"
         });
+    } catch (e) {
+        console.error("Cal.com embed failed to initialize.", e);
     }
 
-    if (forwardButton) {
-        forwardButton.addEventListener('click', () => {
-            try {
-                iframe.contentWindow.history.forward();
-            } catch (e) {
-                console.error("Could not navigate iframe forward due to security restrictions:", e);
-            }
-        });
-    }
+    // The iframe navigation buttons have been removed from the HTML as they are
+    // non-functional due to browser cross-origin security policies.
 });
