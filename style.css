@@ -52,7 +52,9 @@ body {
  * @description Styles the main header/title card of the page.
  */
 #title-card {
-    text-align: center; /* Centers the text content. */
+    display: flex; /* Enables flexbox for side-by-side layout. */
+    justify-content: space-between; /* Pushes text and button to opposite ends. */
+    align-items: center; /* Vertically aligns content. */
     background: var(--brand-primary); /* Uses the primary brand color for the background. */
     color: var(--card-bg); /* Sets text color to contrast with the background. */
     padding: 2rem; /* Adds ample spacing inside the card. */
@@ -60,13 +62,26 @@ body {
 }
 
 /**
+ * @description Removes default text alignment from the container for the title and subtitle.
+ */
+.title-card-text {
+    text-align: left;
+}
+
+/**
  * @description Styles the main heading within the title card.
  */
 #title-card h1 {
     font-size: 2.5rem; /* Large font size for the main title. */
-    margin-top: 0; /* Removes default top margin. */
-    margin-bottom: 0.5rem; /* Adds a small space below the title. */
+    margin: 0; /* Removes all default margins. */
     border-bottom: none; /* Removes any default border. */
+}
+
+/**
+ * @description Styles the subtitle within the title card.
+ */
+#title-card p {
+    margin: 0; /* Removes all default margins. */
 }
 
 /* ============================================
@@ -242,14 +257,16 @@ footer {
 #sticky-header {
     position: fixed; /* Fixes the header to the viewport. */
     top: 1.5rem; /* Adds space from the top of the viewport. */
-    left: 50%; /* Positions the left edge at the center. */
+    left: 3rem; /* Aligns with main content margin. */
+    right: 3rem; /* Aligns with main content margin. */
 
-    width: 100%;
+    width: auto; /* Width is determined by left/right. */
     max-width: 960px; /* Matches the width of content cards. */
+    margin: 0 auto; /* Centers the header when max-width is reached. */
     box-sizing: border-box; /* Ensures padding is included in the total width. */
 
-    background: var(--card-bg);
-    color: var(--text-primary);
+    background: var(--brand-primary); /* Matches main header background. */
+    color: var(--card-bg); /* Matches main header text color. */
     padding: 0.75rem 1.5rem;
     display: flex;
     justify-content: space-between;
@@ -259,8 +276,8 @@ footer {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Matches card shadow. */
     z-index: 1000;
 
-    /* Combines transforms: centers the element horizontally and hides it vertically. */
-    transform: translateX(-50%) translateY(-200%);
+    /* Hides the header off-screen vertically. */
+    transform: translateY(-200%);
     transition: transform 0.4s ease-in-out;
 }
 
@@ -269,8 +286,8 @@ footer {
  * The `scrolled` class is added to the body via JavaScript.
  */
 body.scrolled #sticky-header {
-    /* On scroll, brings the header into view while maintaining horizontal centering. */
-    transform: translateX(-50%) translateY(0);
+    /* On scroll, brings the header into view. */
+    transform: translateY(0);
 }
 
 /**
@@ -337,14 +354,26 @@ body.scrolled #sticky-header {
     background-color: var(--panel-bg);
     border: 1px solid var(--border-light);
     color: var(--text-primary);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem; /* Adjusted padding for icons. */
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    display: flex; /* Enables flexbox for centering. */
+    align-items: center; /* Vertically centers the icon. */
+    justify-content: center; /* Horizontally centers the icon. */
+    width: 40px; /* Gives the button a fixed width. */
+    height: 40px; /* Gives the button a fixed height. */
 }
 
 .iframe-nav button:hover {
     background-color: var(--divider-line);
+}
+
+/**
+ * @description Ensures the SVG icons fill the button and use the correct color.
+ */
+.iframe-nav button svg {
+    fill: currentColor; /* Uses the button's text color. */
 }
 
 
