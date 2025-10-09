@@ -368,7 +368,6 @@ body.scrolled #sticky-header {
     align-items: flex-start;
     flex-direction: row; /* Default to side-by-side for desktop */
     gap: 1rem; /* Increase gap for side-by-side layout */
-    align-items: center; /* Vertically align buttons */
 }
 
 /**
