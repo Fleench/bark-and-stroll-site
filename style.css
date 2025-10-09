@@ -133,6 +133,9 @@ h2 {
     border-left: 5px solid var(--brand-accent); /* Adds a highlight border on the left. */
     padding: 1rem; /* Adds internal spacing. */
     margin-bottom: 1rem; /* Adds space below the promotion. */
+    border-radius: 4px; /* Consistent rounding */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Add a subtle base shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add transition for hover */
 }
 
 /* ============================================
@@ -340,12 +343,6 @@ body.scrolled #sticky-header {
     text-decoration: none; /* Removes underline. */
     color: inherit; /* Inherits text color from parent. */
     display: block; /* Ensures the link takes up the full block for better clicking. */
-}
-
-/* Add hover effect to the inner details card when the link is hovered */
-.card-link .promotion-details {
-    border-radius: 4px; /* Match other card styles */
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card-link:hover .promotion-details {
