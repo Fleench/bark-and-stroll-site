@@ -8,7 +8,7 @@ The website is designed to be clean, friendly, and easy to navigate, providing p
 
 ## 🚀 Setup and Usage
 
-This is a static website built exclusively with HTML and CSS. **It does not contain any JavaScript.** No special build steps or dependencies are required.
+This is a static website built with HTML, CSS, and a small amount of JavaScript for dynamic features. No special build steps or dependencies are required.
 
 To view the website, simply open the `index.html` file in your preferred web browser. You can do this by:
 1.  Cloning or downloading the repository to your local machine.
@@ -19,9 +19,9 @@ To view the website, simply open the `index.html` file in your preferred web bro
 
 The repository is organized as follows:
 
--   **`index.html`**: This is the main entry point of the website. It contains the complete HTML structure, including all content sections like the "About Me" page, services, promotions, and the scheduling calendar. The file is commented to delineate each major section.
-
--   **`style.css`**: This file contains all the styling rules for the website. It defines the brand's color palette, typography, layout, and responsive design adjustments for mobile devices. The stylesheet is heavily commented to explain the purpose of each rule.
+-   **`index.html`**: The main HTML file containing the structure of the site.
+-   **`style.css`**: The stylesheet defining the site's appearance, layout, and branding.
+-   **`script.js`**: A JavaScript file that handles dynamic functionality, such as the sticky header.
 
 -   **`assets/`**: This directory holds all static assets used on the site.
     -   **`main-logo.png`**: The brand logo for Paws, which is currently used as the website's favicon.
