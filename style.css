@@ -476,7 +476,7 @@ body.scrolled #sticky-header {
     #title-card .header-buttons, #sticky-header .header-buttons {
         flex-direction: row;
         gap: 0.5rem;
-        width: 50%; /* Ensure buttons take full width */
+        width: 100%; /* Ensure buttons take full width */
     }
 
     #title-card .header-buttons .button, #sticky-header .header-buttons .button {
