@@ -52,11 +52,20 @@ body {
  * @description Styles the main header/title card of the page.
  */
 #title-card {
-    text-align: center; /* Centers the text content. */
+    display: flex; /* Enables flexbox for side-by-side layout. */
+    justify-content: space-between; /* Pushes text and button to opposite ends. */
+    align-items: center; /* Vertically aligns content. */
     background: var(--brand-primary); /* Uses the primary brand color for the background. */
     color: var(--card-bg); /* Sets text color to contrast with the background. */
-    padding: 2rem; /* Adds ample spacing inside the card. */
+    padding: 1.5rem; /* Standardizes card padding. */
     border-radius: 8px; /* Rounds the corners of the card. */
+}
+
+/**
+ * @description Removes default text alignment from the container for the title and subtitle.
+ */
+.title-card-text {
+    text-align: left;
 }
 
 /**
@@ -64,9 +73,15 @@ body {
  */
 #title-card h1 {
     font-size: 2.5rem; /* Large font size for the main title. */
-    margin-top: 0; /* Removes default top margin. */
-    margin-bottom: 0.5rem; /* Adds a small space below the title. */
+    margin: 0; /* Removes all default margins. */
     border-bottom: none; /* Removes any default border. */
+}
+
+/**
+ * @description Styles the subtitle within the title card.
+ */
+#title-card p {
+    margin: 0; /* Removes all default margins. */
 }
 
 /* ============================================
@@ -118,6 +133,9 @@ h2 {
     border-left: 5px solid var(--brand-accent); /* Adds a highlight border on the left. */
     padding: 1rem; /* Adds internal spacing. */
     margin-bottom: 1rem; /* Adds space below the promotion. */
+    border-radius: 4px; /* Consistent rounding */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Add a subtle base shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add transition for hover */
 }
 
 /* ============================================
@@ -232,6 +250,161 @@ footer {
 }
 
 /* ============================================
+   🐾 Sticky Header
+   ============================================ */
+/**
+ * @section Sticky Header
+ * @description Styles for the header that sticks to the top of the page on scroll.
+ * It's designed to match the width and style of the main content cards.
+ */
+#sticky-header {
+    position: fixed; /* Fixes the header to the viewport. */
+    top: 1.5rem; /* Adds space from the top of the viewport. */
+    left: 3rem; /* Aligns with main content margin. */
+    right: 3rem; /* Aligns with main content margin. */
+
+    width: auto; /* Width is determined by left/right. */
+    max-width: 960px; /* Matches the width of content cards. */
+    margin: 0 auto; /* Centers the header when max-width is reached. */
+    box-sizing: border-box; /* Ensures padding is included in the total width. */
+
+    background: var(--brand-primary); /* Matches main header background. */
+    color: var(--card-bg); /* Matches main header text color. */
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 8px; /* Matches card corners. */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Matches card shadow. */
+    z-index: 1000;
+
+    /* Hides the header off-screen vertically. */
+    transform: translateY(-200%);
+    transition: transform 0.4s ease-in-out;
+}
+
+/**
+ * @description Controls the visibility of the sticky header.
+ * The `scrolled` class is added to the body via JavaScript.
+ */
+body.scrolled #sticky-header {
+    /* On scroll, brings the header into view. */
+    transform: translateY(0);
+}
+
+/**
+ * @description Container for the text content within the sticky header.
+ */
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem; /* Adds space between text elements. */
+}
+
+.header-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.header-divider {
+    color: var(--divider-line);
+}
+
+/* ============================================
+   🐾 Buttons & Navigation
+   ============================================ */
+/**
+ * @section Buttons
+ * @description General styles for buttons, including the booking button.
+ */
+.button {
+    background: var(--brand-accent);
+    color: var(--card-bg);
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #e3944a; /* Slightly darker shade for hover. */
+    transform: translateY(-2px);
+}
+
+/**
+ * @description Styles for card links to remove default anchor styling.
+ */
+.card-link {
+    text-decoration: none; /* Removes underline. */
+    color: inherit; /* Inherits text color from parent. */
+    display: block; /* Ensures the link takes up the full block for better clicking. */
+}
+
+.card-link:hover .promotion-details {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+}
+
+/**
+ * @description Adds margin to the booking button in the main title card.
+ */
+#title-card .booking-button {
+    margin-top: 1rem;
+}
+
+/**
+ * @description Container for header buttons to manage layout.
+ */
+.header-buttons {
+    display: flex;
+    align-items: flex-end; /* Aligns buttons to the bottom of the header. */
+    flex-direction: row; /* Default to side-by-side for desktop */
+    gap: 1rem; /* Increase gap for side-by-side layout */
+}
+
+/**
+ * @section Iframe Navigation
+ * @description Styles for the back/forward buttons for the calendar embed.
+ */
+.iframe-nav {
+    display: flex;
+    gap: 0.5rem; /* Adds space between the buttons. */
+    margin-bottom: 1rem; /* Adds space below the buttons. */
+}
+
+.iframe-nav button {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-light);
+    color: var(--text-primary);
+    padding: 0.5rem; /* Adjusted padding for icons. */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex; /* Enables flexbox for centering. */
+    align-items: center; /* Vertically centers the icon. */
+    justify-content: center; /* Horizontally centers the icon. */
+    width: 40px; /* Gives the button a fixed width. */
+    height: 40px; /* Gives the button a fixed height. */
+}
+
+.iframe-nav button:hover {
+    background-color: var(--divider-line);
+}
+
+/**
+ * @description Ensures the SVG icons fill the button and use the correct color.
+ */
+.iframe-nav button svg {
+    fill: currentColor; /* Uses the button's text color. */
+}
+
+
+/* ============================================
    🐾 Utility Classes
    ============================================ */
 /**
@@ -251,6 +424,21 @@ footer {
  */
 @media (max-width: 768px) {
     /**
+     * @description Reduces side margins for the main content on mobile.
+     */
+    main {
+        margin: 1.5rem 1.5rem 0; /* Reduces side margins. */
+    }
+
+    /**
+     * @description Adjusts sticky header positioning to align with new mobile margins.
+     */
+    #sticky-header {
+        left: 1.5rem; /* Matches main content's mobile margin. */
+        right: 1.5rem; /* Matches main content's mobile margin. */
+    }
+
+    /**
      * @description Stacks the about cards vertically on smaller screens.
      */
     .about-container {
@@ -262,5 +450,34 @@ footer {
      */
     #title-card h1 {
         font-size: 2rem;
+    }
+
+    /**
+     * @description Stacks title card content vertically on mobile for better flow.
+     */
+    #title-card {
+        flex-direction: column;
+        align-items: flex-start; /* Aligns items to the start (left). */
+        gap: 1rem; /* Adds space between text and button. */
+    }
+
+    /**
+     * @description Stacks header buttons vertically on mobile.
+     */
+    #sticky-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    #title-card .header-buttons, #sticky-header .header-buttons {
+        flex-direction: row;
+        gap: 0.5rem;
+        width: 100%; /* Ensure buttons take full width */
+    }
+
+    #title-card .header-buttons .button, #sticky-header .header-buttons .button {
+        text-align: center; /* Center text within buttons */
+        width: 100%;
     }
 }

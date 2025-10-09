@@ -92,12 +92,24 @@ body {
  * @description Styles the main container that holds all content sections.
  */
 main {
-    display: flex; /* Enables flexbox layout. */
-    flex-direction: column; /* Stacks children vertically. */
-    align-items: center; /* Centers children horizontally. */
-    gap: 1.5rem; /* Adds space between each section. */
     padding: 1.5rem; /* Adds padding around the main content area. */
     margin: 3rem 3rem 0; /* Adds margin to the top and sides. */
+    display: flex; /* Use flexbox to center the main-container. */
+    justify-content: center; /* Center the main-container horizontally. */
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column; /* Mobile-first: default to single column */
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 960px; /* Constrains the overall width */
+}
+
+.left-column, .right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 /**
@@ -109,7 +121,7 @@ section {
     border-radius: 8px; /* Rounds the corners. */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth. */
     width: 100%; /* Ensures the section takes the full width of its container. */
-    max-width: 960px; /* Constrains the maximum width for readability on large screens. */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
 /**
@@ -422,6 +434,27 @@ body.scrolled #sticky-header {
  * @section Responsive Design
  * @description Media queries to adjust the layout for smaller screens (e.g., mobile devices).
  */
+/* Desktop Layout: Two-column grid */
+@media (min-width: 769px) {
+    .main-container {
+        flex-direction: row;
+    }
+
+    .left-column {
+        flex: 0 0 40%; /* Assigns 40% of the width to the left column */
+    }
+
+    .right-column {
+        flex: 1; /* The right column takes the remaining space */
+    }
+
+    /* Make the last card in each column fill the remaining space */
+    .left-column section:last-child,
+    .right-column section:last-child {
+        flex-grow: 1;
+    }
+}
+
 @media (max-width: 768px) {
     /**
      * @description Reduces side margins for the main content on mobile.
