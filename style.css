@@ -365,6 +365,7 @@ body.scrolled #sticky-header {
  */
 .header-buttons {
     display: flex;
+    align-items: flex-start;
     flex-direction: row; /* Default to side-by-side for desktop */
     gap: 1rem; /* Increase gap for side-by-side layout */
     align-items: center; /* Vertically align buttons */
@@ -474,7 +475,7 @@ body.scrolled #sticky-header {
     }
 
     #title-card .header-buttons, #sticky-header .header-buttons {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
         width: 50%; /* Ensure buttons take full width */
     }
