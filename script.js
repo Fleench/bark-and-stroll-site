@@ -23,20 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    /**
-     * @section Cal.com Embed
-     * @description Initializes the Cal.com inline embed. The Cal() function is loaded
-     * from an external script and will queue any calls made before it has loaded.
-     */
-    try {
-        Cal("inline", {
-            elementOrSelector: "#my-cal-inline",
-            calLink: "flench04"
-        });
-    } catch (e) {
-        console.error("Cal.com embed failed to initialize.", e);
-    }
-
     // The iframe navigation buttons have been removed from the HTML as they are
     // non-functional due to browser cross-origin security policies.
 });
