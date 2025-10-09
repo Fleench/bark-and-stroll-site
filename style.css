@@ -365,7 +365,7 @@ body.scrolled #sticky-header {
  */
 .header-buttons {
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end; /* Aligns buttons to the bottom of the header. */
     flex-direction: row; /* Default to side-by-side for desktop */
     gap: 1rem; /* Increase gap for side-by-side layout */
 }
