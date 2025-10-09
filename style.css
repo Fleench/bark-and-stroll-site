@@ -180,7 +180,7 @@ h2 {
     flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens. */
     gap: 2rem; /* Adds space between the about cards. */
     justify-content: center; /* Centers the items horizontally. */
-    align-items: center; /* Aligns items vertically. */
+    align-items: flex-start; /* Aligns items to the top. */
 }
 
 /**
