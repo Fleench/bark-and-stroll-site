@@ -34,6 +34,6 @@ The repository is organized as follows:
 
 -   **Responsive Design**: The layout adapts to different screen sizes, ensuring a good user experience on both desktop and mobile devices.
 -   **Brand-Consistent Styling**: A clear color palette and font hierarchy are defined in `style.css` using CSS variables for easy maintenance.
--   **Embedded Scheduling**: Integrates with `cal.com` via an `<iframe>` to allow clients to book walks directly.
+-   **Embedded Scheduling**: Uses a redirect to `cal.com` to allow clients to book walks directly.
 -   **Modular Sections**: The HTML is organized into clear, reusable sections for promotions, services, and other content.
 -   **Hidden Content**: Certain services are hidden by default using a `.hidden` utility class, allowing them to be easily toggled on or off without changing the HTML structure.
